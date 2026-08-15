@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 400" width="740" height="400" role="img" aria-label="Passport lifecycle: create and register, fund with ALGO, opt into assets, set aside gas, add rules, then automation runs. You can close it at any point.">
+  <defs>
+    <marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7188a5"/>
+    </marker>
+    <style>
+      .t     { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+      .box   { fill: #f4f6fa; stroke: #b9c4d6; stroke-width: 1.5; }
+      .key   { fill: #e3edff; stroke: #6f97dd; stroke-width: 2; }
+      .num   { font-size: 11px; font-weight: 700; fill: #6f97dd; }
+      .name  { font-size: 14.5px; font-weight: 600; fill: #16202e; }
+      .sub   { font-size: 11.5px; fill: #5a6a80; }
+      .line  { stroke: #7188a5; stroke-width: 1.5; fill: none; marker-end: url(#a2); }
+      .note  { font-size: 12px; fill: #5a6a80; }
+    </style>
+  </defs>
+
+  <rect class="box" x="30"  y="46" width="200" height="94" rx="8"/>
+  <text class="t num"  x="50" y="70">1</text>
+  <text class="t name" x="50" y="93">Create and register</text>
+  <text class="t sub"  x="50" y="113">One action. Unregistered</text>
+  <text class="t sub"  x="50" y="129">means never automated.</text>
+
+  <rect class="box" x="270" y="46" width="200" height="94" rx="8"/>
+  <text class="t num"  x="290" y="70">2</text>
+  <text class="t name" x="290" y="93">Fund with ALGO</text>
+  <text class="t sub"  x="290" y="113">First, always. Assets</text>
+  <text class="t sub"  x="290" y="129">need ALGO behind them.</text>
+
+  <rect class="box" x="510" y="46" width="200" height="94" rx="8"/>
+  <text class="t num"  x="530" y="70">3</text>
+  <text class="t name" x="530" y="93">Opt into assets</text>
+  <text class="t sub"  x="530" y="113">Including the ones your</text>
+  <text class="t sub"  x="530" y="129">rules will buy.</text>
+
+  <rect class="box" x="30"  y="216" width="200" height="94" rx="8"/>
+  <text class="t num"  x="50" y="240">4</text>
+  <text class="t name" x="50" y="263">Set aside gas</text>
+  <text class="t sub"  x="50" y="283">The only ALGO the keeper</text>
+  <text class="t sub"  x="50" y="299">can ever draw on.</text>
+
+  <rect class="box" x="270" y="216" width="200" height="94" rx="8"/>
+  <text class="t num"  x="290" y="240">5</text>
+  <text class="t name" x="290" y="263">Add rules</text>
+  <text class="t sub"  x="290" y="283">Each with a price bound</text>
+  <text class="t sub"  x="290" y="299">you would accept.</text>
+
+  <rect class="key" x="510" y="216" width="200" height="94" rx="8"/>
+  <text class="t num"  x="530" y="240">6</text>
+  <text class="t name" x="530" y="263">Automation runs</text>
+  <text class="t sub"  x="530" y="283">Rules fire when due,</text>
+  <text class="t sub"  x="530" y="299">within your bounds.</text>
+
+  <path class="line" d="M 232 93 L 266 93"/>
+  <path class="line" d="M 472 93 L 506 93"/>
+  <path class="line" d="M 610 142 L 610 168 L 130 168 L 130 212"/>
+  <path class="line" d="M 232 263 L 266 263"/>
+  <path class="line" d="M 472 263 L 506 263"/>
+
+  <text class="t note" x="370" y="358" text-anchor="middle">Edit or cancel a rule at any time. Withdraw free balance at any time.</text>
+  <text class="t note" x="370" y="378" text-anchor="middle">Close the passport and reclaim everything at any time - it is never gated.</text>
+</svg>

@@ -1,0 +1,43 @@
+# This repository contains DOCUMENTATION ONLY.
+#
+# It sits alongside the contract, keeper and deployment sources on disk, and
+# none of those may ever be committed here. These entries exist so that an
+# accidental `git add -A` from the wrong directory cannot publish them.
+
+# contract and protocol sources
+smart_contracts/
+contracts/
+trading-strategies/
+*.teal
+*.puya
+*.arc56.json
+*.approval.bin
+*.clear.bin
+programs.gen.ts
+
+# automation and deployment
+keeper/
+daemon/
+deploy/
+tools/
+*.env
+.env*
+
+# internal working material
+for-review/
+backups/
+testing/
+notes/
+runbooks/
+
+# sdk sources (linked, never vendored)
+sdk/
+defi-passport/
+defi-passport-sdk/
+node_modules/
+
+# editor and os
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

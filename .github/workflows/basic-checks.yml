@@ -1,0 +1,41 @@
+name: basic-checks
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  links:
+    name: check markdown links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: markdown-link-check
+        uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'
+          use-verbose-mode: 'yes'
+          config-file: '.github/markdown-link-check-config.json'
+
+  no-source:
+    name: refuse contract or automation sources
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: fail if a non-documentation file was committed
+        run: |
+          # This repository is documentation. Anything else has arrived by
+          # accident, and the exclusions in .gitignore are easy to bypass with
+          # `git add -f`, so the check is repeated here where it cannot be.
+          bad=$(git ls-files \
+            | grep -Ev '\.(md|svg|json|ya?ml)$' \
+            | grep -Ev '^(LICENSE|\.editorconfig|\.gitattributes|\.gitignore)$' \
+            || true)
+          if [ -n "$bad" ]; then
+            echo "unexpected files committed to a documentation repository:"
+            echo "$bad"
+            exit 1
+          fi
+          echo "documentation only, as expected"
