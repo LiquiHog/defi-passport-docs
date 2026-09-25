@@ -5,15 +5,18 @@ one you can install depends on your address.
 
 | Tier | Version | Strategies | Availability |
 |---|---|---|---|
-| **Public** | v1.0.0 | Scheduled buys, limit orders | Open to any Algorand address |
-| **Beta** | v1.1.0 | Scheduled buys, limit orders, grid, balancer | Allowlisted addresses only |
+| **Public** | v1.0.2 | Scheduled buys, limit orders, grid, balancer | Open to any Algorand address |
+| **Beta** | v1.1.2 | All of the above, plus lending (Folks Finance) and payments | Allowlisted addresses only |
 
-Both are live on mainnet.
+Both are live on mainnet. Beta also adds proceeds routing and gas paid in
+another asset. Every version and what it adds is listed in
+[Versions and upgrades](../reference/versions-and-upgrades.md).
 
-## Why the public build is restricted
+## Why grids and balancers started in beta
 
-Not because the other two strategies are unfinished, but because they are harder
-to configure safely.
+Until v1.0.2, the public build refused grids and balancers. v1.0.2 opened them.
+They started in beta not because they were unfinished, but because they are
+harder to configure safely.
 
 A scheduled buy and a limit order each protect a fill with a **single fixed
 number**: the minimum output you will accept. There is one figure to get right,
@@ -26,9 +29,9 @@ floor and an expiry on those bounds. Each is a number that can be set to
 something that looks reasonable and is not. The failure is quieter: the rule
 runs, fills, and costs you more than it should.
 
-So the public build is the smaller surface. Both builds are the same contract
-with the same interface - the difference is a single gate, checked when a
-strategy is created, that refuses to open a grid or a balancer.
+So the public build started as the smaller surface. Both builds are the same
+contract with the same interface - the difference is a single gate, checked when
+a strategy is created, that refuses the strategy types a build does not offer.
 
 Refusing at creation rather than at execution is the part that matters. A build
 that accepted a strategy it could never service would leave your funds committed
@@ -68,9 +71,9 @@ If you want to be considered, or want to know when the next round opens, ask:
   chat is the right place
 
 If you are not on the allowlist, the public build is fully functional for what it
-covers. Scheduled buys and limit orders are not a trial version; they are two of
-the four strategies, working exactly as documented, on the same contract with the
-same custody guarantees.
+covers. Scheduled buys, limit orders, grids and balancers are not a trial
+version; they work exactly as documented, on the same contract with the same
+custody guarantees.
 
 ## Checking which tier an address has
 

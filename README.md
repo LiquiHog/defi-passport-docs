@@ -84,19 +84,19 @@ reserved, and close the passport entirely whenever you want.
 |---|---|---|
 | **[Scheduled buys](docs/strategies/dca.md)** | Public | Trade a fixed amount on a fixed interval - dollar-cost averaging, in either direction |
 | **[Limit orders](docs/strategies/limit-orders.md)** | Public | Trade a fixed amount only at or better than a price you set, with optional partial fills and expiry |
-| **[Grid](docs/strategies/grid.md)** | Beta | Price cells that buy low, sell high, and re-arm themselves. No oracle involved |
-| **[Balancer](docs/strategies/balancer.md)** | Beta | Hold a set of assets at target values and trade back toward them when they drift |
+| **[Grid](docs/strategies/grid.md)** | Public | Price cells that buy low, sell high, and re-arm themselves. No oracle involved |
+| **[Balancer](docs/strategies/balancer.md)** | Public | Hold a set of assets at target values and trade back toward them when they drift |
 
 ## Tiers
 
-Two builds of the same contract, from one source. The public build is the
-smaller surface; the beta build adds the two strategies that carry more
-configuration and more ways to set it wrong.
+Two builds of the same contract, from one source. The public build runs all
+four strategies above; the beta build adds lending (Folks Finance), payments,
+proceeds routing and gas paid in another asset.
 
 | Tier | Version | Strategies | Availability |
 |---|---|---|---|
-| **Public** | v1.0.0 | Scheduled buys, limit orders | Open to any Algorand address |
-| **Beta** | v1.1.0 | All four | Allowlisted addresses only |
+| **Public** | v1.0.2 | All four | Open to any Algorand address |
+| **Beta** | v1.1.2 | All four, plus lending and payments | Allowlisted addresses only |
 
 Both are the same line, so moving from public to beta is an in-place upgrade -
 nothing migrates and no funds move. See [Tiers](docs/core/tiers.md) for how to
@@ -193,10 +193,10 @@ Full navigation in [docs/README.md](docs/README.md).
 
 DeFi Passport is **live on Algorand mainnet** and **in beta**.
 
-- The public tier (v1.0.0) is open and restricted to scheduled buys and limit
-  orders.
-- The beta tier (v1.1.0) adds the grid and balancer strategies and is limited to
-  allowlisted addresses.
+- The public tier (v1.0.2) is open to any address and runs scheduled buys, limit
+  orders, grids and balancers.
+- The beta tier (v1.1.2) adds lending (Folks Finance) and payments, and is
+  limited to allowlisted addresses.
 - The contracts have **not been audited by a third party**.
 - Interfaces and mechanics may change. Version upgrades are never forced - you
   choose whether and when to apply one.
