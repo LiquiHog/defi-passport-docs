@@ -51,7 +51,7 @@ will ever ask you for one.
 
 ## Beta access
 
-The beta tier adds the grid and balancer strategies. The launch round of the
+The beta tier adds lending (Folks Finance) and payments. The launch round of the
 allowlist is closed; criteria for future rounds will be announced.
 
 To ask about it, message us on [X](https://x.com/LiquiHog) or join the

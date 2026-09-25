@@ -18,7 +18,7 @@ What the documentation led you to expect, with a link to the page if relevant.
 3.
 
 **Context**
-- Passport version (public v1.0.0 or beta v1.1.0):
+- Passport version (for example public v1.0.2 or beta v1.1.2):
 - Strategy type, if relevant:
 - Approximate time it happened:
 

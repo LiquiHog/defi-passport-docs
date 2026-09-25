@@ -147,8 +147,9 @@ holding at that moment.
 
 **Why can't I use the grid or the balancer?**
 
-They are beta-tier, and your address is not on the allowlist. The public build
-runs scheduled buys and limit orders. See [Tiers](../core/tiers.md).
+Your passport is on v1.0.0 or v1.0.1, which refuse them. v1.0.2, the current
+public version, opens grids and balancers; upgrading to it is in place and
+nothing migrates. See [Versions and upgrades](versions-and-upgrades.md).
 
 **How do I get beta access?**
 

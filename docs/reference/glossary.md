@@ -8,7 +8,7 @@
 | **Balancer** | Beta-tier strategy that holds a set of assets at target values and trades back toward them on drift |
 | **Band** | How far a balancer holding may drift from its target before the strategy acts |
 | **Basis points (bps)** | Hundredths of a percent. 5 bps is 0.05% |
-| **Beta tier** | The v1.1.0 build, with all four strategy types, available to allowlisted addresses |
+| **Beta tier** | The v1.1.2 build: the public strategies plus lending and payments, available to allowlisted addresses |
 | **Buy ceiling** | The most a balancer will pay per unit when buying. Mandatory |
 | **Cell** | One price point in a grid, holding one side at a time and flipping after each fill |
 | **Committed** | See *Reserved* |
@@ -35,7 +35,7 @@
 | **Partial fill** | A limit order filled in slices rather than all at once. Off by default |
 | **Passport** | Your own smart contract. Holds your funds, stores your rules, and enforces them |
 | **Position** | A holding your passport has recorded - either set aside from spending, or described so a balancer can value it |
-| **Public tier** | The v1.0.0 build, with scheduled buys and limit orders, open to any address |
+| **Public tier** | The v1.0.2 build, with scheduled buys, limit orders, grids and balancers, open to any address |
 | **Quote asset** | The asset a strategy prices in and, for a balancer, holds a shared reserve of |
 | **Registry** | The contract a passport registers with. Publishes the keeper's identity and the fee rate. App id `3672932347`. Fixed for a passport's life |
 | **Reserved** | Funds a rule or strategy is holding. Not withdrawable and not spendable by anything else until released |

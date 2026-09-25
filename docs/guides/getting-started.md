@@ -15,8 +15,8 @@ whether you use the app or drive the contracts directly - see
 The registry decides which version an address may install, and the answer is
 readable from chain before you commit to anything. It comes back as one of:
 
-- **the public version (v1.0.0)** - scheduled buys and limit orders
-- **the beta version (v1.1.0)** - all four strategies, for allowlisted addresses
+- **the public version (v1.0.2)** - scheduled buys, limit orders, grids and balancers
+- **the beta version (v1.1.2)** - all of those plus lending and payments, for allowlisted addresses
 - **nothing** - no line is currently open to this address
 
 Ask first rather than finding out from a failed transaction. See

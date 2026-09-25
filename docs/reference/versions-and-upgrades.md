@@ -35,14 +35,26 @@ you create a new passport and move funds across deliberately.
 
 ## Live versions
 
-| Version | Tier | Strategies |
-|---|---|---|
-| **v1.0.0** | Public | Scheduled buys, limit orders |
-| **v1.1.0** | Beta | All four |
+Every version below is approved on mainnet, and an approved version is never
+withdrawn, so each stays installable. Measured from the deployed programs:
 
-Both are in the same line, so moving from the public build to the beta build is
-an **in-place minor update**. Your passport keeps its address, its funds, its
-running strategies and its history. Nothing migrates.
+| Version | Tier | Size | Strategies | What it adds |
+|---|---|---|---|---|
+| v1.0.0 | Public | 6,790 B | Scheduled buys, limit orders | The first public build |
+| v1.0.1 | Public | 6,895 B | Scheduled buys, limit orders | Gas cap: you can cap the rate the keeper may charge for gas |
+| **v1.0.2** | **Public (current)** | 6,911 B | + grid, balancer | Opens grids and balancers on the public build. Nothing else changes |
+| v1.1.0 | Beta | 6,806 B | Scheduled buys, limit orders, grid, balancer | The beta line before the gas cap |
+| v1.1.1 | Beta | 6,911 B | Same as v1.1.0 | Gas cap. The same program as v1.0.2 |
+| **v1.1.2** | **Beta (current)** | 10,588 B | + lending (Folks Finance), payments | Proceeds routing, and gas paid in another asset |
+
+The registry hands out **v1.0.2** on the public tier and **v1.1.2** on beta.
+v1.0.2 and v1.1.1 are byte-identical: the same program approved under two
+version numbers.
+
+All of them are in the same major line, so moving between them - including from
+the public build to the beta build - is an **in-place update**. Your passport
+keeps its address, its funds, its running strategies and its history. Nothing
+migrates.
 
 See [Tiers](../core/tiers.md).
 
